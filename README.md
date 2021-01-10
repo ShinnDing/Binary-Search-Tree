@@ -15,5 +15,5 @@ Assignment Summary:
     4) Binary Search Tree class must be separate from Node class and implement recursive methods.
     5) Implement encapsulation by having a clean separation between the Node and binary search tree classes.
     6) Use a linked implementation.
-
-
+6.  Comment each class using Javadocs style.
+7.  Include UML Structure Diagram.
