@@ -1,6 +1,7 @@
 # Binary Search Tree
 
-*This code is posted with instructor permission, and adheres to school policy.
+*Introduction to Data Structures assignment.
+*This code is posted with instructor's permission, and adheres to Metropolitan State University's policy.
 
 Assignment Summary:
 
