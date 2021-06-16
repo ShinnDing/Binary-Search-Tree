@@ -1,14 +1,11 @@
 
 /**
- * 
  * @author Stephanie Shinn
  * 
  * This entire GuitarBTNode class was adapted from BTNode.java found at
  *    Code adapted from https://www.cs.colorado.edu/~main/edu/colorado/nodes/BTNode.java
- *
  */
 public class GuitarBTNode {
-
 	private Guitar data;
 	private GuitarBTNode left, right;
 
