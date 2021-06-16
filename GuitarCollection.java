@@ -1,6 +1,5 @@
 
 /**
- * 
  * @author Stephanie Shinn
  * 
  * [GuitarCollection is a Binary Search Tree modeled after methods found at 
