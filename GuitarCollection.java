@@ -8,12 +8,10 @@
  *   Chapter 9 of "DATA STRUCTURES & Other Objects Using JAVA" by
  *   author Michael Main, and "Introduction to Data Structures" class PowerPoint slides.
  *   Assistance was also received from the Tutoring Center.]
- *   
- *  
  * 
  * INVARIANT for the GuitarCollection:
  * 
- * 	1. The elements in the bag are stored in a binary search tree.
+ *  1. The elements in the bag are stored in a binary search tree.
  *  2. The instance variable root is a reference to the root of the
  *     binary search tree (or null for an empty tree).
  *  3. The left child is always less than or equal to the parent.
@@ -32,14 +30,10 @@
  *     - calculates the depth of the Tree (collection)
  *     - calculates the number of Nodes in the Tree (collection)
  *     - traverses the Tree (collection) and searches for a reference to a Guitar matching the item's search key
- *
  */
 public class GuitarCollection {
-
 	private GuitarBTNode root;
-
 	public GuitarCollection() {
-
 		root = null;
 	}
 
@@ -51,11 +45,9 @@ public class GuitarCollection {
 	 *    This method was adapted from PowerPoint presentation "12-F Implementing a Linked List,"
 	 *    slide 13.
 	 * 
-	 * @param t represent the Guitar to be added to the Tree (collection).
-	 * 
+	 * @param t represent the Guitar to be added to the Tree (collection). 
 	 */
 	public void add(Guitar t) {
-
 		if (root == null) {
 			root = new GuitarBTNode(t, null, null);
 		} else {
@@ -64,7 +56,6 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * add(GuitarBTNode cursor, Guitar t) is a helper method.
 	 *    It adds a node to the tree in the correct location, depending on the value of data.
 	 *	  This method was adapted from PowerPoint presentation "12-F Implementing a Linked List,"
@@ -76,7 +67,6 @@ public class GuitarCollection {
 	 * @param t represents the Guitar to be added to the Tree (collection).
 	 */
 	private void add(GuitarBTNode cursor, Guitar t) {
-
 		if (t.compareTo(cursor.getData()) <= 0) {
 			if (cursor.getLeft() != null) {
 				add(cursor.getLeft(), t);
@@ -93,11 +83,9 @@ public class GuitarCollection {
 		}
 	}
 	
-	/**
-	 * 
+	/** 
 	 * preorder() calls the preorderPrint(root) helper method to print the Tree (collection)
 	 *    in pre-order.
-	 * 
 	 */
 	public void preorder() {
 		if (root == null) {
@@ -118,7 +106,6 @@ public class GuitarCollection {
 	 *    
 	 *    This method was adapted from the BTNode class found at 
 	 *    https://www.cs.colorado.edu/~main/edu/colorado/nodes/BTNode.java
-	 * 
 	 **/
 	private void preorderPrint(GuitarBTNode cursor) {
 		System.out.println(cursor.getData());
@@ -129,10 +116,8 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * postorder() calls the postorderPrint(root) helper method to print the Tree (collection)
 	 *    in post-order.
-	 * 
 	 */
 	public void postorder() {
 		if (root == null) {
@@ -144,7 +129,6 @@ public class GuitarCollection {
 			System.out.println("\n\t\tBrand\t\tWeight\t\tYear\n\t\t------------------------------------");
 			postorderPrint(root);
 		}
-
 	}
 
 	/**
@@ -154,7 +138,6 @@ public class GuitarCollection {
 	 *    
 	 *    This method was adapted from the BTNode class found at 
 	 *    https://www.cs.colorado.edu/~main/edu/colorado/nodes/BTNode.java
-	 * 
 	 **/
 	private void postorderPrint(GuitarBTNode cursor) {
 		if (cursor.getLeft() != null)
@@ -165,13 +148,10 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * inorder() calls the inorderPrint(root) helper method to print the Tree (collection)
 	 *    in in-order.
-	 * 
 	 */
 	public void inorder() {
-
 		if (root == null) {
 			System.out.println("The collection is empty.  Buy guitars.");
 		} else {
@@ -190,7 +170,6 @@ public class GuitarCollection {
 	 *    
 	 *    This method was adapted from the BTNode class found at 
 	 *    https://www.cs.colorado.edu/~main/edu/colorado/nodes/BTNode.java
-	 * 
 	 **/
 	private void inorderPrint(GuitarBTNode cursor) {
 		if (cursor.getLeft() != null)
@@ -201,7 +180,6 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * depth() calls helper method depth(GuitarBTNode cursor) to 
 	 *    determine the depth of the Tree (collection)
 	 * 
@@ -213,7 +191,6 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * depth(GuitarBTNode cursor) is a helper method that traverses the
 	 *    Tree (collection) and returns max nodes plus 1.
 	 * 
@@ -225,7 +202,6 @@ public class GuitarCollection {
 	 *    branches.
 	 *    
 	 * @return returns the depth (branch level) plus 1.
-	 * 
 	 */
 	private int depth(GuitarBTNode cursor) {
 
@@ -240,7 +216,6 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * count() calls helper method count(GuitarBTNode cursor), which
 	 *    determines the number of Nodes (Guitars) in
 	 *    the Tree (collection).
@@ -248,14 +223,12 @@ public class GuitarCollection {
 	 *    The method was adapted from PowerPoint 12-F, Slide 12.
 	 *    
 	 * @return returns the value from count(GuitarBTNode cursor)
-	 * 
 	 */
 	public int count() {
 		return count(root);
 	}
 
 	/**
-	 * 
 	 * count(GuitarBTNode cursor) is a helper method that traverses the Tree
 	 *    (collection) and returns the number of Nodes (guitars) in the Tree
 	 *    (collection).
@@ -276,7 +249,6 @@ public class GuitarCollection {
 	}
 
 	/**
-	 * 
 	 * search(Guitar item) calls the helper method search(Guitar item, GuitarBTNode cursor)
 	 *    that traverses the Tree (collection) and returns the details of the guitar that
 	 *    matches the search key (brand).
@@ -285,13 +257,11 @@ public class GuitarCollection {
 	 * 
 	 * @return returns the guitar details matching the search key (brand).
 	 */
-	public Guitar search(Guitar item) {
-		
+	public Guitar search(Guitar item) {	
 		return search(item, root);
 	}
 
 	/**
-	 * 
 	 * search(Guitar item, GuitarBTNode cursor) is a helper method that traverses
 	 *    the Tree (collection).
 	 * 
@@ -302,8 +272,7 @@ public class GuitarCollection {
 	 *    see if it is a match with the search key (brand).
 	 * @return returns the matching guitar and its details.
 	 */
-	private Guitar search(Guitar item, GuitarBTNode cursor) {
-		
+	private Guitar search(Guitar item, GuitarBTNode cursor) {	
 		if (cursor == null) {
 			return null;
 		}
