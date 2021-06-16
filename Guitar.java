@@ -6,13 +6,11 @@
  */
 
 public class Guitar {
-
 	private String brand;
 	private int weight;
 	private int year;
 	
 	public Guitar(String b, int w, int y) {
-		
 		setBrand(b);
 		setWeight(w);
 		setYear(y);
@@ -48,7 +46,6 @@ public class Guitar {
 	 * separated by tabs to format columns.
 	 */
 	public String toString() {
-		
 		return String.format("%-15s %-2s %4s", "\t\t" + brand, "\t   " + weight, "\t\t" + year);
 	}
 	
@@ -59,7 +56,6 @@ public class Guitar {
 	 * 		   in list.
 	 */
 	public boolean equals(Guitar other) {
-		
 		if (this.brand.equalsIgnoreCase(other.brand)) {
 			return true;
 		}
@@ -77,7 +73,6 @@ public class Guitar {
 	 *             follows the existing Guitar object in the array
 	 */
 	public int compareTo(Guitar other) {
-
 		return this.brand.compareToIgnoreCase(other.brand);
 	}
 }
