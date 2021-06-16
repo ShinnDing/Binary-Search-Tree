@@ -1,12 +1,9 @@
 
 /**
- * 
  * @author Stephanie Shinn
- *
  */
 public class Driver {
 	public static void main(String[] args) {
-
 		//instantiates new Guitars for testing methods
 		Guitar gibson = new Guitar("Gibson", 9, 2008);
 		Guitar hoffman = new Guitar("Hoffman", 5, 2006);
